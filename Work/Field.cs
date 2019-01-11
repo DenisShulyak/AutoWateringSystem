@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,7 @@ namespace Work
         private double _area; // плошадь поля
         private Detector[] _detectors; // детекторы влажности
         private Culture _culture; // культура растений
+        private IrrigationType _irrigationType; // тип орошения
 
         public double GetArea() 
         {
@@ -35,6 +36,15 @@ namespace Work
         {
             _culture.SetName(name);
             _culture.SetNormalMoisture(normalMoisture);
+        }
+
+        public IrrigationType GetIrrigationType()
+        {
+            return _irrigationType;
+        }
+        public void SetIrrigationType(IrrigationType irrigationType)
+        {
+            _irrigationType = irrigationType;
         }
     }
 
